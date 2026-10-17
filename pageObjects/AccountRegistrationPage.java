@@ -52,3 +52,18 @@ public void setEmail(String email) {
     txtEmail.sendKeys(email);
 
 }
+
+public void setTelephone(String tel) {
+    txtTelephone.sendKeys(tel);
+
+}
+
+public void setPassword(String pwd) {
+    txtPassword.sendKeys(pwd);
+
+}
+
+public void setEmail(String email) {
+    txtEmail.sendKeys(email);
+
+}
