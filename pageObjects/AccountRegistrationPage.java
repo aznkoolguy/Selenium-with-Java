@@ -24,3 +24,31 @@ WebElement txtTelephone;
 
 @FindBy(xpath="//input[@id='input-password']")
 WebElement txtPassword;
+
+@FindBy(xpath="//input[@id='input-confirm']")
+WebElement txtConfirmPassword;
+
+@FindBy(xpath="//input[@name='agree']")
+WebElement chkPolicy;
+
+@FindBy(xpath="//input[@value='Continue']")
+WebElement btnContinue;
+
+@FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
+WebElement msgConfirmation;
+
+
+public void setFirstName(String fname) {
+    txtFirstname.sendkeys(fname);
+
+}
+
+public void setLastName(String lname) {
+    txtLasttname.sendkeys(lname);
+
+}
+
+public void setEmail(String email) {
+    txtEmail.sendKeys(email);
+
+}
