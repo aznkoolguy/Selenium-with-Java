@@ -67,3 +67,10 @@ public void setEmail(String email) {
     txtEmail.sendKeys(email);
 
 }
+
+public String getConfirmationMsg() {
+    try {
+        return (msgConfirmation.getText());
+    }  catch (Exception e) {
+         return (e.getMessage());
+    }
