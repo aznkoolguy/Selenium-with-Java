@@ -10,17 +10,25 @@ public class TC001_AccountRegistrationTest {
     public WebDriver driver;
   
     @BeforeClass
-    void setup()
+    Public void setup()
   {
+        driver=new ChromeDriver();
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
+        driver.get("http://localhost/opencart/upload/index.php");
+        driver.manage().window().maximize();
   }
 
-  void tearDown()
+  @AfterClass
+  Public void tearDown()
   {
-
+      driver.quit();
   }
-
-  void verify_account_registration()
+  @Test
+  Run | Debug
+  public void verify_account_registration()
   {
+      HomePage hp=new HomePage();
 
   }
