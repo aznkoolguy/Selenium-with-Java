@@ -29,6 +29,27 @@ public class TC001_AccountRegistrationTest {
   Run | Debug
   public void verify_account_registration()
   {
-      HomePage hp=new HomePage();
+      HomePage hp=new HomePage(driver);
+      hp.clickMyAccount();
+      hp.clickRegister();
+
+      AccountRegistrationPage regpage=new AccountRegistrationPage(driver);
+
+      regpage.setFirstName(randomeString().toUpperCase());
+      regpage.setLastName(randomeString().toUpperCase());
+      regpage.setEmail(randomeString()+"@gmail.com");// randomly generated
+      regpage.setTelephone(randomeNumber());
+
+      String password=randomAlphaNumeric();
+
+      regpage.setPassword(password);
+      regpage.setConfirmPassword(password);
+
+      regpage.setPrivacyPolicy();
+      regpage.clickContinue();
+
+      String confmsg=regpage.getConfirmationMsg();
+
+      Assert.assertEquals(confmsg,"Your Account Has Been
 
   }
