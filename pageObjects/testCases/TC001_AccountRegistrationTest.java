@@ -50,6 +50,13 @@ public class TC001_AccountRegistrationTest {
 
       String confmsg=regpage.getConfirmationMsg();
 
-      Assert.assertEquals(confmsg,"Your Account Has Been
-
+      Assert.assertEquals(confmsg,"Your Account Has Been Created!");
   }
+
+    public String randomeString()
+    {
+        String generatedstring=RandomStringUtils.randomAlphabetic(5);
+        return generatedstring;
+    }
+
+    
